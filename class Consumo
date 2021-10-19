@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package boletin5;
 
 /**
@@ -59,19 +55,25 @@ public class Consumo {
     public void setpGas(float pGas) {
         this.pGas = pGas;
     }
-    
-    
-    public float getTempo(float tempo, float km, float vMed){
-        tempo = km/vMed;
-        
+
+    public float getTempo(Consumo cm) {
+        float tempo = cm.getKm() / cm.getvMed();
+
         return tempo;
     }
-    public float consumoMedio (float cMed, float pGas,float litros, float km){
-        
-        
-        
+
+    public float consumoMedio(Consumo cm) {
+        float cMed;
+        cMed = (cm.getLitros() / cm.getKm()) * 100;
+
         return cMed;
     }
-    
+
+    public float consumoEuros(Consumo cm) {
+        float auxConEuro = consumoMedio(cm);
+        float cEuro = auxConEuro * cm.getpGas();
+
+        return cEuro;
+    }
 
 }
