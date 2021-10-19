@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package boletin5;
+
+/**
+ *
+ * @author dam1
+ */
+public class Consumo {
+
+    private float km;
+    private float litros;
+    private float vMed;
+    private float pGas;
+
+    public Consumo() {
+
+    }
+
+    public Consumo(float km, float litros, float vMed, float pGas) {
+        this.km = km;
+        this.litros = litros;
+        this.vMed = vMed;
+        this.pGas = pGas;
+
+    }
+
+    public float getKm() {
+        return km;
+    }
+
+    public void setKm(float km) {
+        this.km = km;
+    }
+
+    public float getLitros() {
+        return litros;
+    }
+
+    public void setLitros(float litros) {
+        this.litros = litros;
+    }
+
+    public float getvMed() {
+        return vMed;
+    }
+
+    public void setvMed(float vMed) {
+        this.vMed = vMed;
+    }
+
+    public float getpGas() {
+        return pGas;
+    }
+
+    public void setpGas(float pGas) {
+        this.pGas = pGas;
+    }
+    
+    
+    public float getTempo(float tempo, float km, float vMed){
+        tempo = km/vMed;
+        
+        return tempo;
+    }
+    public float consumoMedio (float cMed, float pGas,float litros, float km){
+        
+        
+        
+        return cMed;
+    }
+    
+
+}
