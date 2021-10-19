@@ -1,5 +1,9 @@
-
 package boletin5;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import jdk.internal.util.xml.impl.Input;
 
 /**
  *
@@ -7,11 +11,24 @@ package boletin5;
  */
 public class Boletin5 {
 
-  
-    public static void main(String[] args) {
-        
-        
-      
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //Primeiro obxeto con valores en litros e precio de gasolina.
+        Consumo cm = new Consumo();
+        cm.setLitros(50f);
+        cm.setpGas(1.57f);
+
+        //Segundo obxeto dándolle os valores utilizando o constructor con parámetros
+        Consumo cm1 = new Consumo(200f, 80f, 120f, 1.55f);
+
+        System.out.println(cm1.consumoMedio(cm1));
+        //Cambio o valor de Litros no segundo obxeto
+        cm1.setLitros(45);
+        System.out.println("A velocidade media é: " + cm1.getvMed());
+
+        //Visualizo o tempo da viaxe, non o pide o exercicio
+        System.out.println("O tempo da viaxe é : " + cm1.getTempo(cm1));
+
     }
-    
+
 }
